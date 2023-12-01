@@ -13,9 +13,30 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-
+  var numRev = num.toString().split('').reverse().join('');
+  //console.log(num, numRev);
+  if (num == numRev){
+      return true;
+  } else {
+      return false;
+  }
 }
 
 // No modifiques nada debajo de esta linea //
 
 module.exports = numeroSimetrico
+
+/* 
+// Solución de SoyHenry
+
+function numeroSimetrico(num) {
+  var numString = num.toStrin();
+  var longitud = numString.length;
+
+  for (var i = 0; i < Math.floor(longitud/2); i++ ){
+    if(numString[i] !== numString[longitud - 1 -i]){
+      return false;
+    }
+  }
+  return true;
+} */

@@ -12,8 +12,27 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
+
+  var sortedArray = strings.sort((x,y) => x.length - y.length)
+  var l = sortedArray.length
+  return sortedArray[l-1]
 }
 
 // No modifiques nada debajo de esta linea //
 
 module.exports = stringMasLarga
+
+/*
+
+solución video SoyHenry
+
+function stringMasLarga(strings){
+  var masLarga = strings[0];
+  for (var i = 1; i < strings.length; i++){
+    if (masLarga.length <= strins[i].length){
+      masLarga = strings[i]
+    }
+    return masLarga;
+
+  }
+}*/
